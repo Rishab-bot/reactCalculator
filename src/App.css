@@ -1,3 +1,4 @@
+/* General Styles */
 .App {
   text-align: center;
 }
@@ -41,44 +42,52 @@
 .calculator-container {
   margin: 20px auto;
   max-width: 400px;
-  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .calculator-display {
   width: 100%;
   font-size: 1.5rem;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
   border: 2px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
+  text-align: right;
+  box-sizing: border-box;
 }
 
 .calculator-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 15px;
 }
 
 .calculator-buttons button {
   font-size: 1.25rem;
-  padding: 15px;
+  padding: 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #61dafb;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .calculator-buttons button:hover {
   background-color: #21a1f1;
+  transform: scale(1.05);
 }
 
 .calculator-buttons .clear-button {
   background-color: #f54242;
+  color: white;
 }
 
 .calculator-buttons .clear-button:hover {
   background-color: #d73838;
+  transform: scale(1.05);
 }

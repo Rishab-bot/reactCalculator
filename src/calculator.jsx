@@ -28,8 +28,10 @@ export function Display() {
 
     return (
         <div className="calculator-container">
-            <input className="calculator-display" value={value} readOnly />
-            <p>{result}</p>
+            <div className="calculator-display">
+                <input value={value} readOnly />
+                <span>{result}</span>
+            </div>
             <div className="calculator-buttons">
                 <button onClick={() => handleButtonClick("7")}>7</button>
                 <button onClick={() => handleButtonClick("8")}>8</button>
