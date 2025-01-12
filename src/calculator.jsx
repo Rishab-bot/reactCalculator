@@ -22,7 +22,12 @@ export function Display() {
             const calculatedResult = eval(value);
 
             // Check for division by zero or other edge cases like Infinity
-            if (calculatedResult === Infinity || calculatedResult === -Infinity || Number.isNaN(calculatedResult)) {
+            if (calculatedResult === Infinity || calculatedResult === -Infinity) {
+                setResult('Infinity');
+                return;
+            }
+
+            if (Number.isNaN(calculatedResult)) {
                 setResult('NaN');
                 return;
             }
@@ -37,7 +42,8 @@ export function Display() {
         <div className="calculator-container">
             <div className="calculator-display">
                 <input value={value} readOnly />
-                <input value={result} readOnly />
+                <br />
+                <div>{result}</div> {/* Result is displayed here */}
             </div>
             <div className="calculator-buttons">
                 <button onClick={() => handleButtonClick("7")}>7</button>
