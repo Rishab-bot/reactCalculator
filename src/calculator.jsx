@@ -19,6 +19,11 @@ export function Display() {
             return;
         }
         try {
+            if (value.includes('/0')) {
+                setResult('NaN');
+                return;
+            }
+
             const calculatedResult = eval(value);
             setResult(calculatedResult);
         } catch (error) {
@@ -30,7 +35,7 @@ export function Display() {
         <div className="calculator-container">
             <div className="calculator-display">
                 <input value={value} readOnly />
-                <span>{result}</span>
+                <div>{result}</div> 
             </div>
             <div className="calculator-buttons">
                 <button onClick={() => handleButtonClick("7")}>7</button>
